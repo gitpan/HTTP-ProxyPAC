@@ -1,4 +1,11 @@
-Revision history for Perl extension HTTP::ProxyPAC
+Revision history for Perl module HTTP::ProxyPAC
+
+0.2   Mar 12 2010
+      * use JavaScript or JE as interpreter
+      * include Netscape JavaScript library as alternative to Perl library
+      * include options in new as to which interpreter and library to use
+      * add/adapt test from HTTP::ProxyAutoConfig
+      * update documentation for both ProxyPAC and ProxyPAC::Result
 
 0.01  Thu May 25 09:40:18 2006
 	- original version
