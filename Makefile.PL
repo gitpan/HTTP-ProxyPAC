@@ -2,6 +2,9 @@ use strict;
 use warnings;
 use ExtUtils::MakeMaker;
 
+eval "require JavaScript";
+my @optional = $@ ? ('JE' => 0.044) : ();
+
 WriteMakefile(
     'ABSTRACT_FROM'      => 'lib/HTTP/ProxyPAC.pm',
     'AUTHOR'             => 'Tatsuhiko Miyagawa <miyagawa@bulknews.net>',
@@ -10,9 +13,9 @@ WriteMakefile(
     'CONFIGURE_REQUIRES' => {'ExtUtils::MakeMaker' => 6.52},
     'LICENSE'            => 'perl',
     'NAME'               => 'HTTP::ProxyPAC',
-    'PREREQ_PM'          =>                  {'JE' => 0.042,
-                                             'LWP' => 5.834,
-                                    'Scalar::Util' => 0,
-                                             'URI' => 1.3}, 
+    'PREREQ_PM'          =>                  {'LWP' => 5.834,
+                                     'Scalar::Util' => 0,
+                                              'URI' => 1.3,
+                                              @optional}, 
     'VERSION_FROM'       => 'lib/HTTP/ProxyPAC.pm'
 );

@@ -1,5 +1,8 @@
 Revision history for Perl module HTTP::ProxyPAC
 
+0.3   Mar 25 2010
+      * do not require JE if JavaScript is installed
+
 0.2   Mar 12 2010
       * use JavaScript or JE as interpreter
       * include Netscape JavaScript library as alternative to Perl library

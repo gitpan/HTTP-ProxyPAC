@@ -1,7 +1,7 @@
 package HTTP::ProxyPAC;
 
 use strict;
-our $VERSION = '0.2';
+our $VERSION = '0.3';
 
 use Carp;
 use Scalar::Util qw(blessed);
