@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               HTTP-ProxyPAC
-version:            0.3
+version:            0.31
 abstract:           use a PAC (Proxy Auto Config) file to get proxy info
 author:
     - Tatsuhiko Miyagawa <miyagawa@bulknews.net>
@@ -12,7 +12,6 @@ build_requires:
     FindBin:     0
     Test::More:  0.32
 requires:
-    JE:            0.044
     LWP:           5.834
     Scalar::Util:  0
     URI:           1.3

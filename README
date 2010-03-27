@@ -23,9 +23,9 @@ DESCRIPTION
       http://www.returnproxy.com/proxypac/
      
     This version will use the JavaScript module and I<libjs> from 
-    Mozilla, if the installer finds either or both installed.  
-    Otherwise it will use the JE module as its JavaScript interpreter, 
-    so that CPAN or CPANPLUS can do the whole installation.
+    Mozilla, if it finds JavaScript installed.  Otherwise it will use 
+    the JE module as its JavaScript interpreter, so that CPAN or 
+    CPANPLUS can do the whole installation.
 
     If you have any problems, please complain to craig@animalhead.com
     rather than the original author.  Include the error message and 

@@ -1,5 +1,8 @@
 Revision history for Perl module HTTP::ProxyPAC
 
+0.31  Mar 26 2010
+      * another try at "do not require JE if JavaScript is installed"
+
 0.3   Mar 25 2010
       * do not require JE if JavaScript is installed
 

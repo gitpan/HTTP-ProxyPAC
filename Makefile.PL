@@ -2,7 +2,8 @@ use strict;
 use warnings;
 use ExtUtils::MakeMaker;
 
-eval "require JavaScript";
+# require JE if at install site and no JavaScript
+eval '$ENV{HTTP_PROXY_PLACE} or require JavaScript';
 my @optional = $@ ? ('JE' => 0.044) : ();
 
 WriteMakefile(
@@ -13,9 +14,9 @@ WriteMakefile(
     'CONFIGURE_REQUIRES' => {'ExtUtils::MakeMaker' => 6.52},
     'LICENSE'            => 'perl',
     'NAME'               => 'HTTP::ProxyPAC',
-    'PREREQ_PM'          =>                  {'LWP' => 5.834,
-                                     'Scalar::Util' => 0,
-                                              'URI' => 1.3,
-                                              @optional}, 
+    'PREREQ_PM'          =>                 {'LWP' => 5.834,
+                                    'Scalar::Util' => 0,
+                                             'URI' => 1.3,
+                                             @optional}, 
     'VERSION_FROM'       => 'lib/HTTP/ProxyPAC.pm'
 );
